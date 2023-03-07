@@ -1,7 +1,26 @@
 % !TeX root = ..\main.tex
 
-\section{MongoDB Design}
+\section{Design and Structure of MongoDB}
+According to \url{db-engines.com}, MongoDB is currently the most popular document database as well as the most popular non-relational database overall
+and has been for many years by now \parencite{DB-Engines-Ranking, DB-Engines-Trend}. 
 
-\subsection{Technical design}
+As is the case in any other document database, a record in MongoDB is a document with pairs of fields and their values \parencite[p. 90]{chauhan2019review}. 
+The database itself is a container for so-called collections, which in turn are containers for arbitrary groups of documents \parencite[p. 90]{chauhan2019review}.
+In the case of MongoDB the documents are similar to JSON (JavaScript Object Notation) objects, although instead of using native JSON MongoDB stores data 
+in a format called BSON, which stands for binary JSON \parencites[p. 4]{Membrey2014}[p. 90]{chauhan2019review}. Contrary to what one might expect when 
+thinking of BSON as a binary form of JSON, BSON is not necessarily more space efficient than JSON and can in many cases take up more storage space than JSON \parencite[p. 11]{Membrey2014}. 
+The design of MongoDB prioritizes performance over space-efficiency. Thus, BSON sacrifices some disk space in order to gain indexing and query performance \parencite[p. 11]{Membrey2014}.
+Additionally, converting BSON to the native data format of a programming language is generally faster and easier than doing the same with JSON data \parencite[p. 11]{Membrey2014}. 
 
-\subsection{Structure}
+Apart from being fast, MongoDB is also designed to be horizontally scalable \parencite[p. 2, 6-7]{Membrey2014}. In contrast to vertical scaling, which is achieved by upgrading the ressources
+of a single server to improve performance, horizontal scaling is achieved by dividing the data set or workload of a single server across multiple servers and adding
+servers to increase capacity as needed \parencite{Mongo-Sharding}. To that end, MongoDB provides a process called \enquote{sharding}. This involves splitting the 
+data set at the collection level and distributing the documents of a collection across the shards (data nodes) in the cluster \parencites{Mongo-Sharding}[p. 7]{Membrey2014}.
+In addition to the shards, a cluster then also requires config servers and so-called mongos, which act as query routers and provide an interface between the 
+client applications and the cluster \parencite{Mongo-Sharding}.
+
+Another major concept behind the design of MongoDB is that there should always be multiple copies of data \parencite[p. 2]{Membrey2014}. To achieve this, MongoDB 
+provides replica sets. A replica set is a group of MongoDB nodes that contain the same data set \parencites{Mongo-Replication}[p. 90]{chauhan2019review}. Exactly 
+one of the data nodes is considered the primary node, while the other data nodes are secondary nodes. Write operations to a replica set can only be received and
+executed by its primary node while Read operations can be sent to any data node in the replica set \parencite{Mongo-Replication}. When the primary node becomes 
+unavailable, the remaining nodes elect one of the secondary nodes to be the new primary node \parencite{Mongo-Replication}. 

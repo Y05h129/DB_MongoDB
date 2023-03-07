@@ -39,7 +39,7 @@
             ]
         },
         {
-            "name": "pdflatex -> biber -> pdflatex * 2",
+            "name": "pdflatex ➞ biber ➞ pdflatex × 2",
             "tools": [
                 "pdflatex",
                 "biber",
@@ -207,7 +207,7 @@
             "env": {}
         }
     ],
-    "latex-workshop.latex.autoBuild.run": "onSave",
+    "latex-workshop.latex.autoBuild.run": "never",
     "[git-commit]": {
         "editor.rulers": [
             72, 50
