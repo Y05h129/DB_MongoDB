@@ -2,28 +2,34 @@
 
 \section{Position according to CAP}
 
-According to Brewer it is not possible to have all three properties at the same time. 
+According to Brewer it is not possible to have all three properties at the same time.
 The CAP theorem includes consistency (C), availability (A), and tolerance to network partitions (P) as its components \parencite{Brewer2000}.
 The use case for MongoDB is very common for real-time applications that are executed at different locations \parencite{Jayasekara2021}.
+\\
+% consistency single master nodes,  master write and slave read
+% eventually consistent
+The consistency property can be parted into strongly consistent and eventually consistent. 
+Strong consistency means that changes to one node in the system were immediately visible on the other nodes.
+Eventual consistency means that the system will eventually become consistent, but not necessarily immediately. 
+The time it takes for the system to become consistent depends on the system and the changes made.
+Based on that it is necessary to build additional logic to handle potentially inconsistent data \parencite[p. 4-5]{MongoDB2018}.
+MongoDB can provide either strongly consistent or eventually consistent data, depending on the use case \parencite[p. 5]{MongoDB2018}.
+Another way to point out the importance of consistency to the MongoDB-Team is the Jepsen-Test.
+This test is used, among other things, to check data consistency \parencite{Mongo-Jepsen}.
+\\
+% availability cluster structure shards replica sets
+Another concept that MongoDB uses is sharding, which is used to increase availability and scalability. 
+Through Sharding the data is split and distributed across the shards in the cluster \parencites{Mongo-Sharding}[p. 7]{Membrey2014}.
+Due to the splitting among different nodes the data is available even if one or more nodes are down. 
+There is only one exception to this rule, which is the primary node. If the primary node is down, the system will be not available \parencites{Mongo-Sharding}. 
 \\
 %partition tolerance
 Replica sets lay the foundation for high availability and redundancy. With multiple replications of the data to different database servers a partition tolerance is provided.
 Occasionally, replication offers the advantage of increasing read capacity, as the read accesses are distributed across different servers.
 Maintaining data copies at different server locations can increase data locality and availability. In addition, data copies can be used for example as backups \parencite{Mongo-Replication}.
-%sharding
-
-
-%consisteny single master nodes,  master write and slave read
-
-
-
-
-% availability clusterstruktur shards replica sets
-
-
-
-
-MongoDB is considered as a CP database, because it focuses on consistency across the entire system and partition tolerance \parencite{Jayasekara2021}.
+\\
+On one hand MongoDB is considered as a CP database, because it focuses on consistency across the entire system and partition tolerance \parencite{Jayasekara2021}.
+But it is also possible to use MongoDB as an AP database, because it is possible to configure the system to be available even if the system is partitioned.
 
 % %read and write concerns
 % %causal consistency
@@ -33,7 +39,8 @@ MongoDB is considered as a CP database, because it focuses on consistency across
 
 
 % https://www.mongodb.com/docs/v6.0/core/causal-consistency-read-write-concerns/
-
+% https://stackoverflow.com/questions/11292215/where-does-mongodb-stand-in-the-cap-theorem
+% https://tedblob.com/mongodb-cap-theorem/
 % https://www.mongodb.com/blog/post/casual-guarantees-anything-casual
 % MongoDB has been continuously running — and passing — Jepsen tests for years. Recently, we have been working with the Jepsen team to test for causal consistency. 
 % With their help, we learned how complex the failure modes become if you trade consistency guarantees for data throughput and recency.

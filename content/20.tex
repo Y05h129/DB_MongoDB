@@ -2,3 +2,52 @@
 
 \section{Comparing document DB and relational DB}
 
+
+
+
+
+\begin{table}[H]
+    \centering
+    % \begin{adjustbox}{width=1\textwidth}
+        \begin{tabular}{c|c|c}
+            \textbf{Category} & \textbf{Relational database}    & \textbf{Document database} \\ \hline \hline
+            Language          & SQL                             & NoSQL                      \\ \hline
+            Structure of data & structured tables               & unstructured collections   \\ \hline
+            Schema            & fixed                           & not fixed                  \\ \hline
+            Relations         & through keys                    & through collections        \\ \hline
+            Linking data      & with joins                      & without joins              \\ \hline
+        \end{tabular}
+    %\end{adjustbox}
+    \caption{Comparison of relational databases and document databases}
+    \label{tab:comparison}
+\end{table}
+\color{black}
+
+% Relational DB - consistent
+% structured data
+% data is stored in fixed tables
+% tables fixed schema
+% each table has unique keys to identify rows
+% data in tables has relations with other tables like 1:1 1:n or n:m 
+% join queries to achieve data from different
+
+% stable and well known
+% optimized storage
+% security
+% easy to backup
+
+% Documentbased DB - eventually consistent
+% unstructured data
+% data is stored in documents
+% documents does not have to have the same schema
+% all data related to one object is stored in one collection
+% no joins needed
+
+% flexibility
+% high scalability horizontally without more needed ressources
+% cost effectiveness
+
+% https://tea-band.com/de/relationale-vs-nicht-relationale-datenbanken/#Dokumentendatenspeicher
+% https://datascientest.com/de/sql-vs-nosql-unterschiede-anwendungen-vor-und-nachteile
+% https://www.pragimtech.com/blog/mongodb-tutorial/relational-and-non-relational-databases/
+% https://www.mongodb.com/de-de/nosql-explained

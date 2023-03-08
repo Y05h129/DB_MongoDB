@@ -1,0 +1,31 @@
+{"rule":"FAST","sentence":"^\\QApart from being fast, MongoDB is also designed to be horizontally scalable \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q.\\E$"}
+{"rule":"SENT_START_NUM","sentence":"^\\Q4]Membrey2014[p.\\E$"}
+{"rule":"SENT_START_NUM","sentence":"^\\Q90]chauhan2019review.\\E$"}
+{"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\QThis involves splitting the data set at the collection level and distributing the documents of a collection across the shards (data nodes) in the cluster Mongo-Sharding[p.\\E$"}
+{"rule":"SENT_START_NUM","sentence":"^\\Q7]Membrey2014.\\E$"}
+{"rule":"PASSIVE_VOICE","sentence":"^\\QIn contrast to vertical scaling, which is achieved by upgrading the resources of a single server to improve performance, horizontal scaling is achieved by dividing the data set or workload of a single server across multiple servers and adding servers to increase capacity as needed \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q.\\E$"}
+{"rule":"ALSO","sentence":"^\\QApart from being fast, MongoDB is also designed to be horizontally scalable \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q.\\E$"}
+{"rule":"ALSO","sentence":"^\\QIn addition to the shards, a cluster then also requires config servers and so-called mongos, which act as query routers and provide an interface between the client applications and the cluster \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q.\\E$"}
+{"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\QIn addition to the shards, a cluster then also requires config servers and so-called mongos, which act as query routers and provide an interface between the client applications and the cluster \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q.\\E$"}
+{"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\QA replica set is a group of MongoDB nodes that contain the same data set Mongo-Replication[p.\\E$"}
+{"rule":"BECOME","sentence":"^\\QWhen the primary node becomes unavailable, the remaining nodes elect one of the secondary nodes to be the new primary node \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q.\\E$"}
+{"rule":"PASSIVE_VOICE","sentence":"^\\QExactly one of the data nodes is considered the primary node, while the other data nodes are secondary nodes.\\E$"}
+{"rule":"LIST","sentence":"^\\QThere is a significant list of packages that you can download on the website of MongoDB: www.mongodb.com.\\E$"}
+{"rule":"PASSIVE_VOICE","sentence":"^\\QOccasionally, replication offers the advantage of increasing read capacity, as the read accesses are distributed across different servers.\\E$"}
+{"rule":"PASSIVE_VOICE","sentence":"^\\QWith multiple replications of the data to different database servers a partition tolerance is provided.\\E$"}
+{"rule":"PASSIVE_VOICE","sentence":"^\\QMongoDB is considered as a CP database, because it focuses on consistency across the entire system and partition tolerance \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q.\\E$"}
+{"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\QThrough Sharding the data is split and distributed across the shards in the cluster Mongo-Sharding[p.\\E$"}
+{"rule":"PASSIVE_VOICE","sentence":"^\\QThrough Sharding the data is split and distributed across the shards in the cluster Mongo-Sharding[p.\\E$"}
+{"rule":"BECOME","sentence":"^\\QEventual consistency means that the system will eventually become consistent, but not necessarily immediately.\\E$"}
+{"rule":"EVENTUALLY","sentence":"^\\QThe consistency property can be parted into strongly consistent and eventually consistent.\\E$"}
+{"rule":"EVENTUALLY","sentence":"^\\QEventual consistency means that the system will eventually become consistent, but not necessarily immediately.\\E$"}
+{"rule":"BECOME","sentence":"^\\QThe time it takes for the system to become consistent depends on the system and the changes made.\\E$"}
+{"rule":"EVENTUALLY","sentence":"^\\QMongoDB can provide either strongly consistent or eventually consistent data, depending on the use case \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q.\\E$"}
+{"rule":"PASSIVE_VOICE","sentence":"^\\QOn one hand MongoDB is considered as a CP database, because it focuses on consistency across the entire system and partition tolerance \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q.\\E$"}
+{"rule":"ALSO","sentence":"^\\QBut it is also possible to use MongoDB as an AP database, because it is possible to configure the system to be available even if the system is partitioned.\\E$"}
+{"rule":"PASSIVE_VOICE","sentence":"^\\QBut it is also possible to use MongoDB as an AP database, because it is possible to configure the system to be available even if the system is partitioned.\\E$"}
+{"rule":"TOO_LONG_PARAGRAPH","sentence":"^\\QBut it is also possible to use MongoDB as an AP database, because it is possible to configure the system to be available even if the system is partitioned.\\E$"}
+{"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\QIf the primary node is down, the system will be not available Mongo-Sharding.\\E$"}
+{"rule":"PASSIVE_VOICE","sentence":"^\\QThis test is used, among other things, to check data consistency.\\E$"}
+{"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\QAnother way to point out the importance of consistency to the MongoDB-Team is the Jepsen-Test.\\E$"}
+{"rule":"PASSIVE_VOICE","sentence":"^\\QThis test is used, among other things, to check data consistency \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q.\\E$"}

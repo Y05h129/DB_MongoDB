@@ -12,7 +12,7 @@ thinking of BSON as a binary form of JSON, BSON is not necessarily more space ef
 The design of MongoDB prioritizes performance over space-efficiency. Thus, BSON sacrifices some disk space in order to gain indexing and query performance \parencite[p. 11]{Membrey2014}.
 Additionally, converting BSON to the native data format of a programming language is generally faster and easier than doing the same with JSON data \parencite[p. 11]{Membrey2014}. 
 
-Apart from being fast, MongoDB is also designed to be horizontally scalable \parencite[p. 2, 6-7]{Membrey2014}. In contrast to vertical scaling, which is achieved by upgrading the ressources
+Apart from being fast, MongoDB is also designed to be horizontally scalable \parencite[p. 2, 6-7]{Membrey2014}. In contrast to vertical scaling, which is achieved by upgrading the resources
 of a single server to improve performance, horizontal scaling is achieved by dividing the data set or workload of a single server across multiple servers and adding
 servers to increase capacity as needed \parencite{Mongo-Sharding}. To that end, MongoDB provides a process called \enquote{sharding}. This involves splitting the 
 data set at the collection level and distributing the documents of a collection across the shards (data nodes) in the cluster \parencites{Mongo-Sharding}[p. 7]{Membrey2014}.
