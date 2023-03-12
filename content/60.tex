@@ -1,10 +1,22 @@
 % !TeX root = ..\main.tex
 
 \section{API}
+To interact with a database, MongoDB provides drivers for a sizeable collection of modern programming languages as well as a shell called \texttt{mongosh}, which itself is a fully
+functional Node.JS environment \parencite{Mongo-mongosh, Mongo-API}. The shell and drivers can be used to execute CRUD (create, read, update and delete) operations on documents of the database.
+At that, these operations are performed in the context of collections \parencites{Mongo-Crud}[pp. 347-349]{Truica2013}. 
 
+When creating a new document, if the collection of the document does not yet exist, it is implicitly created \parencite{Mongo-insert}. Additionally, each document requires a unique \texttt{\_id} 
+field, which is used as the primary key. This field will be generated, if it is not provided when inserting a new document \parencite{Mongo-insert}. Once set, this field cannot be changed and 
+is thus immutable \parencite{Mongo-update}. In general, all write operations (creating, updating or deleting documents) in MongoDB are atomic on the level of documents \parencite{Mongo-insert, Mongo-update, Mongo-delete}.
 
-\subsection{Structure of API}
+When reading documents from a collection, the MongoDB driver or shell returns a cursor which manages the query results \parencite{Mongo-read}. This cursor can then be iterated to access the 
+documents that resulted from the query \parencite{Mongo-cursor}.
 
+% read:
+    % cursor 
+% concern(s):
+    % read isolation / replica sets -> read concern
+    % write acknowledgement -> write concern
 
-\subsection{optional: Clients/Wrappers}
+% if needed name examples for programming languages in line 1 
 

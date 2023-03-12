@@ -12,7 +12,7 @@ The consistency property can be parted into strongly consistent and eventually c
 Strong consistency means that changes to one node in the system were immediately visible on the other nodes.
 Eventual consistency means that the system will eventually become consistent, but not necessarily immediately. 
 The time it takes for the system to become consistent depends on the system and the changes made.
-Based on that it is necessary to build additional logic to handle potentially inconsistent data \parencite[p. 4-5]{MongoDB2018}.
+Based on that it is necessary to build additional logic to handle potentially inconsistent data \parencite[pp. 4-5]{MongoDB2018}.
 MongoDB can provide either strongly consistent or eventually consistent data, depending on the use case \parencite[p. 5]{MongoDB2018}.
 Another way to point out the importance of consistency to the MongoDB-Team is the Jepsen-Test.
 This test is used, among other things, to check data consistency \parencite{Mongo-Jepsen}.

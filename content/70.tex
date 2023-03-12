@@ -2,6 +2,29 @@
 
 \section{Advantages and Disadvantages}
 
+MongoDB Inc. describes their advantages on their own website. A few key features of the given list are mentioned below.
+\\
+Starting with the advantage that MongoDB, as a document-based database, offers the possibility to store data in a flexible way.
+It is possible to store an object in a collection with a different set of fields \parencite{Mongo-Advantages}.
+\\
+Another key feature is the option to scale the database horizontally and create clusters with real-time replication.
+Especially the advantages of efficiency, scalability, and redundancy are important for the use in a big data environment \parencite{Mongo-Advantages}.
+The efficiency to perform faster is given by the fact that no normalization is necessary, and no joins are needed \parencite[p. 2]{Cottrell2020}.
+MongoDB is running on standard hardware, so companies can host and scale big data solutions in their own data centers \parencite[p. 1]{Cottrell2020}.
+\\
+The variable access options to the data form a further advantage. The storage of all data in the BSON data format enables access from any language, like for example
+Python, JavaScript, Java, etc. \parencite{Mongo-Advantages}.
+Additionally multi-document ACID transactions are supported to ensure data integrity \parencite{Mongo-ACID}.
+\\
+Based on the advantages, there are also disadvantages. The first disadvantage is the lack of a standard query language.
+It is not possible to use SQL to query the data. On this basis, there is a lack of flexibility in querying the data, as no joins can be used \parencite{Mongo-Advantages}
+\\
+Another disadvantage is the lack of normalization of the data, as more disk space is needed to store the related data in the collections \parencite[p. 2]{Cottrell2020}.
+More disk space is also needed through the flexible data storage, as a collection can contain different sets of fields \parencite{Mongo-Advantages}.
+\\
+Last but not least there are some disadvantages based on the limits of MongoDB. The maximum size of a document is 16 megabytes
+and the maximum levels of nesting is 100 for BSON documents \parencite{Mongo-Limits}.
+
 
 \subsection{Comparison with other DBs}
 

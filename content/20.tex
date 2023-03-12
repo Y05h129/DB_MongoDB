@@ -11,11 +11,12 @@
     % \begin{adjustbox}{width=1\textwidth}
         \begin{tabular}{c|c|c}
             \textbf{Category} & \textbf{Relational database}    & \textbf{Document database} \\ \hline \hline
-            Language          & SQL                             & NoSQL                      \\ \hline
-            Structure of data & structured tables               & unstructured collections   \\ \hline
+            Language          & SQL                             & proprietary                \\ \hline
+            group of entries  & table                           & collection                 \\ \hline
+            entry             & row                             & document                   \\ \hline
             Schema            & fixed                           & not fixed                  \\ \hline
             Relations         & through keys                    & through collections        \\ \hline
-            Linking data      & with joins                      & without joins              \\ \hline
+            Linking data      & join                            & embedded documents         \\ \hline
         \end{tabular}
     %\end{adjustbox}
     \caption{Comparison of relational databases and document databases}
@@ -36,7 +37,7 @@
 % security
 % easy to backup
 
-% Documentbased DB - eventually consistent
+% Document based DB - eventually consistent
 % unstructured data
 % data is stored in documents
 % documents does not have to have the same schema
@@ -44,7 +45,7 @@
 % no joins needed
 
 % flexibility
-% high scalability horizontally without more needed ressources
+% high scalability horizontally without more needed resources
 % cost effectiveness
 
 % https://tea-band.com/de/relationale-vs-nicht-relationale-datenbanken/#Dokumentendatenspeicher

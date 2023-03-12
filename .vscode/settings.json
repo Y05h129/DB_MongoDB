@@ -1,6 +1,6 @@
 {
     "ltex.language": "en-US",
-    "ltex.additionalRules.enablePickyRules": true,
+    "ltex.additionalRules.enablePickyRules": false,
     "ltex.additionalRules.motherTongue": "de-DE",
     "ltex.completionEnabled": true,
     "latex-workshop.latex.recipe.default": "lastUsed",
