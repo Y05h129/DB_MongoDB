@@ -1,10 +1,62 @@
 % !TeX root = ..\main.tex
 
-\section{Test/Examples}
+\section{Installation}
+There is a significant list of packages that you can download on the website of MongoDB: \url{www.mongodb.com}. 
+Depending on operating system and processor of your server, you can choose a version of MongoDB. 
+You can decide whether you like a stable, a released or a development version which is stil in developement but contains new features \parencite{Membrey2014}.
+
+\subsection{Requirements e.g. configfiles}
+The most important part is the operating system, just as MacOS, Solaris, Windows, Linux, etc. 
+The second part, it depends on, is the bit version of your  system: 32-bit or 64-bit. 
+Not to mention, that the software itself, has different versions, depending on the functionality: just as i wrote at the beginning, there are versions which are full versions with some functions and features which has been developed in the past, called a stable version. 
+Also there are versions which are released version, which contain the stable version and developed functions (so more functions than the stable version, but has been developed).
+And at least the version which is still in development, so anything can be changed with every update you are downloading (not-stable version).
+
+For guarantying that every function and feature can be fully used, there are some supported platforms, with a list including all information, so you know if a version is available on your system.
+You can view these information on the MongoDB installation page in the docs: \url{https://www.mongodb.com/docs/manual/installation/}.
+
+MongoDB supports a few platforms: 
+\begin{itemize}
+    \item Amazon Linux V1 and V2
+    \item Debian 9, 10, 11
+    \item RHEL/CentOS, Oracle Linux, Rocky, Alm a 9.0+, 8.0+, 7.0+, 6.2+
+    \item SLES 12, 15
+    \item Ubuntu 22.04, 20.04, 18.04, 16.04
+    \item Windows Server 2019, 2008/2012/2012R2, 2016
+    \item Windows 10
+    \item macOS 11, 10.14+, 10.13, 10.12, 
+\end{itemize}
+
+\subsection{Linux server}
+
+\subsubsection{Installation through Repositories}
+So if you want to download MongoDB on Linux, you have got two different ways to go:
+The first one installs MongoDB through the Repositories, it will install the packages automatically. 
+In Ubuntu the default repositories includes MongoDB, the version might be out-of-date, so here is the installation-guide with \texttt{apt-get}:
+You have to run a few lines in your repository-list in \texttt{/etc/apt/sources.list}.
+\\
+The first one to go is: \\
+\texttt{deb https://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen}        % Zeilenumbruch checken, weiß aber auch nimmer wie das geht
+Then you need to import MongoDB Inc's public GPG-key, which is used to sign the packages you want to download and ensure their consistency. 
+To do that you can use the following apt-key command: 
+\texttt{\$ apt-key adv --keyserver keyserver.ubuntu.com --recv 7F0CEB10}
+To get the new repositories, you need to update it:
+\texttt{\$ sudo apt-get update}
+To finally install the software itself, you need to use this line in your shell:
+\texttt{\$ sudo apt-get install mongodb-org}
+To install a specific version, you can just add the version number, just like this:
+\texttt{\$ sudo apt-get install mongodb-org=2.7.8}
+And that's it, now you can use MongoDB, just as you want\dots
+
+\subsubsection{Installation Manually}
 
 
-\subsection{What is hard to implement? What is easy?}
+
+\subsection{Docker}
+
+\subsection{optional: Windows/MacOS}
 
 
-\subsection{Relational example (own example)}
+\parencite{Mongo-Installation}
 
+\parencite[p. ]{Subramanian2019}
