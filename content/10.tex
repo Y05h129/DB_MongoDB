@@ -4,58 +4,62 @@
 
 
 \subsection{General information and characteristics}
-Document-oriented databases are one of the many categories of NoSQL databases used for managing 
-data in modern applications. 
-The focus of document-oriented databases is on storing data in the form of documents, 
-which consist of a collection of key-value pairs. The data types that can be stored in a document 
-are diverse and can include text, numbers, arrays, and other documents. 
-Unlike relational databases, document-oriented databases do not have a fixed schema, 
-which means they are more flexible and adaptable.
+Document-oriented databases are a special type of NoSQL databases that have gained popularity 
+in recent years (Bach, Kundisch, Neumann, Schlangenotto, & Whittaker, 2016, p. 487). 
+Unlike relational databases, where data is organized in tables, document-oriented databases 
+store data as unstructured documents (Bach, Kundisch, Neumann, Schlangenotto, & Whittaker, 2016, p. 493).
+One of the main advantages of document-oriented databases is their flexibility in storing data 
+(Bach, Kundisch, Neumann, Schlangenotto, & Whittaker, 2016, p. 488). Unlike relational databases, 
+where the schema must be defined in advance, data can be stored in document-oriented databases 
+without a fixed schema. This means that it is possible to add new data fields and structures 
+without changing the database design. This property facilitates agility in application 
+development, particularly in applications with a constantly changing data model 
+(Bach, Kundisch, Neumann, Schlangenotto, & Whittaker, 2016, p. 486).
+Another strength of document-oriented databases is their ability to manage large amounts of data. 
+Document-oriented databases can distribute large amounts of data across multiple servers to ensure 
+high scalability. This makes it possible to process large amounts of data in a short time while 
+providing high performance (Bach, Kundisch, Neumann, Schlangenotto, & Whittaker, 2016, p. 487).
+One of the most well-known document-oriented databases is MongoDB. MongoDB is an open-source 
+database that is used in many application areas. MongoDB offers a variety of features, including 
+the ability to perform complex aggregations (Bach, Kundisch, Neumann, Schlangenotto, & Whittaker, 2016, p. 495).
+The use of document-oriented databases, which fall under the category of NoSQL databases, offers many advantages 
+in agile development and adaptation to dynamic environments. However, they also present some 
+challenges in application development and NoSQL data design. The lack of standardization in query 
+languages and the flexibility of the database schema make it difficult to develop 
+database-independent applications. When structuring NoSQL data, both planned queries and 
+evaluations and the peculiarities of the used NoSQL DBMS must be considered. A systematic schema 
+management can simplify the process of evolution of NoSQL data. Developers therefore require 
+comprehensive knowledge of database implementation techniques to be able to use NoSQL DBMS 
+correctly and in the long term (Klettke, Störl, & Scherzinger, 2016, p. 441).
+Overall, document-oriented databases offer many advantages over relational databases, particularly
+in terms of flexibility and scalability.
 
-Another important characteristic of document-oriented databases is their horizontal scalability. 
-This means they can be distributed across multiple servers to provide better performance and 
-availability. By using sharding techniques, document-oriented databases can distribute 
-data horizontally across multiple servers to achieve higher capacity and better scalability.
-
-Document-oriented databases also support a variety of query methods, including indexing and 
-aggregation. Indexing is a process where specific data fields in a document are indexed to 
-make queries faster. Aggregation refers to grouping documents to calculate results, such as 
-the number of documents that match a particular criterion.
-
-Another important aspect of document-oriented databases is scaling read and write access. 
-Some document-oriented databases support scaling write access by asynchronously replicating 
-data to multiple servers. This means write access can be performed on one server instance while 
-data is automatically replicated to other servers. Read access can also be scaled by 
-distributing read queries to multiple servers to provide better performance and availability.
-
-Some of the most well-known document-oriented databases include MongoDB, CouchDB, and RavenDB. 
-MongoDB is one of the most popular document-oriented databases, known for its flexibility, 
-high performance, and horizontal scalability.
 
 
 \subsection{History}
 
-Document-oriented databases originated in the 1980s with the introduction of Lotus Notes, 
-which is considered a pioneer in this area. Lotus Notes was one of the first databases to use 
-documents as its central data model. In the 1990s, other document-oriented databases emerged, 
-such as ObjectStore and InterSystems Caché.
+The development of document-oriented databases began in the late 2000s as part of the NoSQL 
+movement, which focused on processing large amounts of data. There are four main types of NoSQL 
+databases, including key-value, document-oriented, column-oriented, and graph databases. 
+MongoDB is ranked fifth in popularity among database systems according to the TOPDB database 
+index. MongoDB, CouchDB, and Firebase are among the significant document-oriented databases and 
+are among the top 14 databases according to the 2021 StackOverflow survey. 
+(Eisermann & Gerold, p. 41)
 
-However, the modern era of document-oriented databases began in the 2000s, as the need for 
-scalable databases to manage big data in web applications and other modern applications grew. 
-The first document-oriented database developed in this context was CouchDB, which was created by 
-Damien Katz in 2005. CouchDB was known for its ability to provide high availability and 
-reliability while maintaining flexibility and scalability.
+NoSQL databases differ from traditional relational databases and were developed in the late 2000s.
+The term "NoSQL" was first coined by Carlo Strozzi in 1998. There were some pioneers of NoSQL 
+databases like Ken Thompson's DBM and Lotus Notes, BerkeleyDB, and GT.M in the early days. 
+However, they were not designed for processing large amounts of data.
 
-%doppelt?
-However, the modern era of document-oriented databases began in the 2000s, as the need for 
-scalable databases to manage big data in web applications and other modern applications grew. 
-The first document-oriented database developed in this context was CouchDB, which was created by 
-Damien Katz in 2005. CouchDB was known for its ability to provide high availability and 
-reliability while maintaining flexibility and scalability.
+With the emergence of Web 2.0 and the need to process very large amounts of data, Google became 
+a leader in developing technologies like the Map/Reduce framework, the BigTable database, and 
+the GFS file system. Other companies like Yahoo, Amazon, MySpace, Facebook, and LinkedIn followed 
+suit.
 
-Since the introduction of CouchDB and MongoDB, document-oriented databases have become an 
-important part of the modern database landscape. They provide developers with a powerful and 
-flexible way to store and manage data, particularly in applications with a lot of unstructured 
-data. Additionally, they enable companies to build scalable and reliable database infrastructures 
-that meet the requirements of modern applications.
+Between 2006 and 2009, many classic NoSQL systems like Cassandra, CouchDB, Neo4j, and MongoDB 
+were developed, optimized for processing large amounts of data and horizontally scalable.
+
+In 2009, the term "NoSQL" was used as a buzzword and no longer just stood for "Not Only SQL". 
+(Köln, 2020)
+
 

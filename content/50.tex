@@ -2,18 +2,27 @@
 
 \section{Installation}
 There is a significant list of packages that you can download on the website of MongoDB: \url{www.mongodb.com}. 
-Depending on operating system and processor of your server, you can choose a version of MongoDB. 
-You can decide whether you like a stable, a released or a development version which is stil in developement but contains new features \parencite{Membrey2014}.
+Depending on operating system and processor of your server, you can choose a version and release channel of MongoDB. \parencite{Membrey2014}.
 
 \subsection{Requirements e.g. configfiles}
 The most important part is the operating system, just as MacOS, Solaris, Windows, Linux, etc. 
-The second part, it depends on, is the bit version of your  system: 32-bit or 64-bit. 
-Not to mention, that the software itself, has different versions, depending on the functionality: just as i wrote at the beginning, there are versions which are full versions with some functions and features which has been developed in the past, called a stable version. 
-Also there are versions which are released version, which contain the stable version and developed functions (so more functions than the stable version, but has been developed).
-And at least the version which is still in development, so anything can be changed with every update you are downloading (not-stable version).
+The second part, it depends on, is the bit version of your  system: 32-bit or 64-bit.
+Important: Not every system supports every bit-version.
+But the most important thing is the software itself, just as I wrote at the beginning.
+The different versions:
+\begin{itemize}
+    \item Community Server (open-source version of MongoDB)
+    \item Enterprise Server (the commercial version of MongoDB, which is available with a paid subscription)
+\end{itemize}
+and release channels:
+\begin{itemize}
+    \item Stable Release ()
+    \item Release Candidate ()
+    \item Development Release ()
+\end{itemize}
 
 For guarantying that every function and feature can be fully used, there are some supported platforms, with a list including all information, so you know if a version is available on your system.
-You can view these information on the MongoDB installation page in the docs: \url{https://www.mongodb.com/docs/manual/installation/}.
+You can view these information on the MongoDB installation page in the docs: \url{https://www.mongodb.com/docs/manual/installation/}.\parencite{Membrey2014}.
 
 MongoDB supports a few platforms: 
 \begin{itemize}
@@ -25,7 +34,7 @@ MongoDB supports a few platforms:
     \item Windows Server 2019, 2008/2012/2012R2, 2016
     \item Windows 10
     \item macOS 11, 10.14+, 10.13, 10.12, 
-\end{itemize}
+\end{itemize}\parencite{Mongo-Installation}
 
 \subsection{Linux server}
 
@@ -46,7 +55,7 @@ To finally install the software itself, you need to use this line in your shell:
 \texttt{\$ sudo apt-get install mongodb-org}
 To install a specific version, you can just add the version number, just like this:
 \texttt{\$ sudo apt-get install mongodb-org=2.7.8}
-And that's it, now you can use MongoDB, just as you want\dots
+And that's it, now you can use MongoDB, just as you want\parencite{Membrey2014}.
 
 \subsubsection{Installation Manually}
 

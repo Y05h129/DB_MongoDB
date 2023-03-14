@@ -42,6 +42,6 @@ The following custom commands are defined:
 * `\chapter{Chapter title}{subtitle}` is a custom commands for chapters - is only used by the template, you should not use/need it use `\section` and `\subsection`
 
 ## Custom Packages
-If you need to use other TeX-Packages as provided, please message me. I will need the list of packages to combine the articles to a book. Please don't use any packages that alter the visual apperence of the article.
+If you need to use other TeX-Packages as provided, please message me. I will need the list of packages to combine the articles to a book. Please don't use any packages that alter the visual appearance of the article.
 
 
