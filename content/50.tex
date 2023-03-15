@@ -16,13 +16,13 @@ The different versions:
 \end{itemize}
 and release channels:
 \begin{itemize}
-    \item Stable Release ()
-    \item Release Candidate ()
-    \item Development Release ()
+    \item Stable Release (provides access to the most recent stable version of MongoDB)
+    \item Release Candidate (provides access to the upcoming version of MongoDB that is being prepared for release)
+    \item Development Release (provides access to the latest development version of MongoDB, which includes new features and functionality that are still being tested)
 \end{itemize}
 
 For guarantying that every function and feature can be fully used, there are some supported platforms, with a list including all information, so you know if a version is available on your system.
-You can view these information on the MongoDB installation page in the docs: \url{https://www.mongodb.com/docs/manual/installation/}.\parencite{Membrey2014}.
+You can view this information on the MongoDB installation page in the docs: \url{https://www.mongodb.com/docs/manual/installation/} \parencite{Membrey2014}.
 
 MongoDB supports a few platforms: 
 \begin{itemize}
@@ -41,29 +41,14 @@ MongoDB supports a few platforms:
 \subsubsection{Installation through Repositories}
 So if you want to download MongoDB on Linux, you have got two different ways to go:
 The first one installs MongoDB through the Repositories, it will install the packages automatically. 
-In Ubuntu the default repositories includes MongoDB, the version might be out-of-date, so here is the installation-guide with \texttt{apt-get}:
-You have to run a few lines in your repository-list in \texttt{/etc/apt/sources.list}.
-\\
-The first one to go is: \\
-\texttt{deb https://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen}        % Zeilenumbruch checken, weiß aber auch nimmer wie das geht
-Then you need to import MongoDB Inc's public GPG-key, which is used to sign the packages you want to download and ensure their consistency. 
-To do that you can use the following apt-key command: 
-\texttt{\$ apt-key adv --keyserver keyserver.ubuntu.com --recv 7F0CEB10}
-To get the new repositories, you need to update it:
-\texttt{\$ sudo apt-get update}
-To finally install the software itself, you need to use this line in your shell:
-\texttt{\$ sudo apt-get install mongodb-org}
-To install a specific version, you can just add the version number, just like this:
-\texttt{\$ sudo apt-get install mongodb-org=2.7.8}
-And that's it, now you can use MongoDB, just as you want\parencite{Membrey2014}.
+In Ubuntu the default repositories includes MongoDB, the version might be out-of-date\dots
+
 
 \subsubsection{Installation Manually}
 
 
 
 \subsection{Docker}
-
-\subsection{optional: Windows/MacOS}
 
 
 \parencite{Mongo-Installation}
