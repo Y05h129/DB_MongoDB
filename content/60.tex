@@ -1,10 +1,28 @@
 % !TeX root = ..\main.tex
 
-\section{Test/Examples}
-
-
-\subsection{What is hard to implement? What is easy?}
-
+\section{Testing MongoDB}
 
 \subsection{Relational example (own example)}
+To test MongoDB in practice, an example from the course \enquote{Web-Development II} was used. 
+The example was a management system for shopping lists, in which shopping lists are objects with a name and a list of items.
+You can check the items on a list, to see if you bought it or not.
+In relational databases this example would be implemented using two tables (\enquote{lists} and \enquote{items}) with a one-to-many
+relation where each list could contain multiple items.
+The test was performed on a locally installed MongoDB server using the native \texttt{mongosh}.
 
+All CRUD operations have been tested.
+In the collection \enquote{lists}, we created 2 documents using \texttt{db.lists.insertOne()}. 
+Since items are contained in a list, in MongoDB these items are called \enquote{embedded documents} \parencite[p. 6]{Membrey2014}. 
+To read all documents in a collection, you use the command: \texttt{db.lists.find()} and for a specific read you add a filter inside the {find()}-Method \parencite{Mongo-read}. 
+The Update-Functionality has been tested too, by using \texttt{db.lists.updateOne()}, to update a single document. 
+Deleting a document has been tested using \texttt{db.lists.deleteOne()} with a filter as a parameter.
+
+
+\subsection{User Experience during the test}
+Compared to a relational database inserting, querying and deleting documents is very easy, since the documents are basically JSON objects.
+At filtering the documents you recognize that the filters are objects (documents) themselves. Additionally, no object-relation mapping was required. 
+
+Since MongoDB implements relations with embedded documents, filtering on a parameter in an embedded document can be harder when compared to a 
+relational approach, since the filters have to traverse every level of the containing document \parencite{Mongo-Embedded-Query}. 
+This traversing also needs to be done, when overwriting (updating) values in an embedded document. Thus, Read and Update operations can become 
+difficult in embedded documents \parencite{Mongo-update}. 

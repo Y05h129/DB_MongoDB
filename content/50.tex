@@ -1,30 +1,15 @@
 % !TeX root = ..\main.tex
 
 \section{Installation}
-There is a significant list of packages that you can download on the website of MongoDB: \url{www.mongodb.com}. 
-Depending on operating system and processor of your server, you can choose a version and release channel of MongoDB. \parencite{Membrey2014}.
+There is a significant list of packages that you can download on the website of MongoDB: \url{www.mongodb.com}. MongoDB provides a Community Edition as well as an Enterprise Edition \parencite{Mongo-Installation}.
 
-\subsection{Requirements e.g. configfiles}
-The most important part is the operating system, just as MacOS, Solaris, Windows, Linux, etc. 
-The second part, it depends on, is the bit version of your  system: 32-bit or 64-bit.
-Important: Not every system supports every bit-version.
-But the most important thing is the software itself, just as I wrote at the beginning.
-The different versions:
-\begin{itemize}
-    \item Community Server (open-source version of MongoDB)
-    \item Enterprise Server (the commercial version of MongoDB, which is available with a paid subscription)
-\end{itemize}
-and release channels:
-\begin{itemize}
-    \item Stable Release (provides access to the most recent stable version of MongoDB)
-    \item Release Candidate (provides access to the upcoming version of MongoDB that is being prepared for release)
-    \item Development Release (provides access to the latest development version of MongoDB, which includes new features and functionality that are still being tested)
-\end{itemize}
+\subsection{Installation requirements}
+The MongoDB server's options and settings are specified using configuration files, which are YAML-files containing the relevant parameters. 
+These configuration files allow for easy management and specification of options for the database server \parencite{Mongo-configuration}.
 
 For guarantying that every function and feature can be fully used, there are some supported platforms, with a list including all information, so you know if a version is available on your system.
-You can view this information on the MongoDB installation page in the docs: \url{https://www.mongodb.com/docs/manual/installation/} \parencite{Membrey2014}.
-
-MongoDB supports a few platforms: 
+You can view this information on the MongoDB installation page in the docs: \url{https://www.mongodb.com/docs/manual/installation/}.
+MongoDB can be installed natively on the following platforms: 
 \begin{itemize}
     \item Amazon Linux V1 and V2
     \item Debian 9, 10, 11
@@ -33,24 +18,12 @@ MongoDB supports a few platforms:
     \item Ubuntu 22.04, 20.04, 18.04, 16.04
     \item Windows Server 2019, 2008/2012/2012R2, 2016
     \item Windows 10
-    \item macOS 11, 10.14+, 10.13, 10.12, 
-\end{itemize}\parencite{Mongo-Installation}
+    \item macOS 11, 10.14+, 10.13, 10.12
+\end{itemize} \parencite{Mongo-Installation}
 
-\subsection{Linux server}
+\subsection{Installation on Linux and Docker}
+The preferred way to install MongoDB natively on a Linux desktop or server is by using the packages
+provided by MongoDB. MongoDB also provides guides detailing the installation process \parencite{Mongo-linux-Install}.
 
-\subsubsection{Installation through Repositories}
-So if you want to download MongoDB on Linux, you have got two different ways to go:
-The first one installs MongoDB through the Repositories, it will install the packages automatically. 
-In Ubuntu the default repositories includes MongoDB, the version might be out-of-date\dots
-
-
-\subsubsection{Installation Manually}
-
-
-
-\subsection{Docker}
-
-
-\parencite{Mongo-Installation}
-
-\parencite[p. ]{Subramanian2019}
+Both editions of MongoDB can also be run in a Docker Container. To that end, MongoDB maintains the respective Docker images
+and provides a detailed installation guides \parencite{Install-Mongo-Docker, Install-Mongo-Docker2}.

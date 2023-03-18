@@ -48,6 +48,12 @@
             ]
         },
         {
+            "name": "biber",
+            "tools": [
+                "biber"
+            ]
+        },
+        {
             "name": "Compile Rnw files",
             "tools": [
                 "rnw2tex",

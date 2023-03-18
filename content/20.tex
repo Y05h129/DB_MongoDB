@@ -2,7 +2,7 @@
 
 \section{Comparing document DB and relational DB}
 
-To compare the two different types of databases, we will use the following table (see \autoref{tab:document-relational-comparison}).
+To compare the two types of databases, we will use the following table.
 
 \begin{table}[H]
     \centering
@@ -14,73 +14,16 @@ To compare the two different types of databases, we will use the following table
             group of entries  & table                           & collection                 \\ 
             entry             & row                             & document                   \\ 
             Schema            & fixed                           & not fixed                  \\ 
-            Relations         & through keys                    & through collections        \\ 
             Linking data      & join                            & embedded documents         \\ 
         \end{tabular}
     \end{adjustbox}
-    \caption{Comparison of relational databases and document databases (\textcite[p. 91]{chauhan2019review}{Relational-vs-Document})}
+    \caption{Comparison of relational databases and document databases \parencites[p. 91]{chauhan2019review}{Relational-vs-Document}}
     \label{tab:document-relational-comparison}
 \end{table}
 \color{black}
 
 The main difference between relational and document databases is the way how data is stored. 
-In relational databases, data is stored in tables with fixed schemas. Each table has a unique key to identify the rows \parencite{chauhan2019review, Relational-vs-Document}. 
+In relational databases, data is stored in tables with fixed schemas. Each table has a unique key to identify the rows \parencites[p. 91]{chauhan2019review}{Relational-vs-Document}. 
 And to build relations between tables like 1:1, 1:n or n:m joins are used \parencite[pp. 25-31]{Studer2019}.
-In document databases, data is stored in documents. The documents do neither have a fixed nor the same schema. 
-All data related to one object is stored in one collection and no joins are needed to access data from different collections \parencite[pp. 18-20]{Meier2016}.
-
-
-Document databases and relational databases are two common types of database systems widely used 
-in software development. Both provide ways to store and retrieve data effectively, but they also 
-have their differences. Below are some of the key differences between the two types of databases.
-
-Structure: Relational databases use tables to organize data, while document databases use 
-documents that typically exist in the JSON format. Document databases have a more flexible 
-structure than relational databases, as they are not bound to a fixed schema structure.
-
-Flexibility: However, the flexibility of document databases comes with a downside: they are less 
-suitable for complex queries and evaluating relationships between different data points. In 
-relational databases, complex queries and relationships can be mapped using JOIN operations or 
-other query methods.
-
-Scalability: Another important factor is scalability. Document databases are often better suited 
-for horizontal scaling, as they can easily be split across different servers. Relational databases,
- on the other hand, can be better vertically scaled by upgrading hardware.
-
-Performance: In terms of performance, it can be difficult to make a direct comparison between 
-document databases and relational databases. Document databases can often be faster when it comes 
-to accessing individual documents, while relational databases are typically faster when it comes 
-to complex queries or transactions.
-
-% https://www.mongodb.com/document-databases
-% https://www.oracle.com/database/what-is-a-relational-database/
-
-
-% Relational DB - consistent
-% structured data
-% data is stored in fixed tables
-% tables fixed schema
-% each table has unique keys to identify rows
-% data in tables has relations with other tables like 1:1 1:n or n:m 
-% join queries to achieve data from different
-
-% stable and well known
-% optimized storage
-% security
-% easy to backup
-
-% Document based DB - eventually consistent
-% unstructured data
-% data is stored in documents
-% documents does not have to have the same schema
-% all data related to one object is stored in one collection
-% no joins needed
-
-% flexibility
-% high scalability horizontally without more needed resources
-% cost effectiveness
-
-% https://tea-band.com/de/relationale-vs-nicht-relationale-datenbanken/#Dokumentendatenspeicher
-% https://datascientest.com/de/sql-vs-nosql-unterschiede-anwendungen-vor-und-nachteile
-% https://www.pragimtech.com/blog/mongodb-tutorial/relational-and-non-relational-databases/
-% https://www.mongodb.com/de-de/nosql-explained
+In document databases, data is stored in schemaless documents which are grouped in collections.
+All data related to one object is stored in one document and no joins are needed to access its data \parencite[pp. 18-20]{Meier2016}.
