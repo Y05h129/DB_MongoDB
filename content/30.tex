@@ -16,7 +16,7 @@ Apart from being fast, MongoDB is also designed to be horizontally scalable \par
 of a single server to improve performance, horizontal scaling is achieved by dividing the data set or workload of a single server across multiple servers and adding
 servers to increase capacity as needed \parencite{Mongo-Sharding}. To that end, MongoDB implements a process called \enquote{sharding}. This involves splitting the 
 data set at the collection level and distributing the documents of a collection across the shards (data nodes) in the cluster \parencites{Mongo-Sharding}[p. 7]{Membrey2014}.
-In addition to the shards, a cluster then also requires config servers and so-called \enquote{mongos}, which act as query routers and provide an interface between the 
+In addition to the shards, a cluster then also requires config servers and query routers, which provide an interface between the 
 client applications and the cluster \parencite{Mongo-Sharding}.
 
 Another major concept behind the design of MongoDB is that there should always be multiple copies of data \parencite[p. 2]{Membrey2014}. To achieve this, MongoDB 
